@@ -710,8 +710,59 @@ repeating-linear-gradient(
 #ffffff 0 12px,
 transparent 12px 24px
 );
+position:relative;
+overflow:hidden;
+animation:moveArrow 1s linear infinite;
+}
+
+.roadmap-arrow{
+
+width:120px;
+
+height:4px;
+
+background:
+repeating-linear-gradient(
+90deg,
+#ffffff 0 12px,
+transparent 12px 24px
+);
+
+position:relative;
+
+overflow:hidden;
 
 animation:moveArrow 1s linear infinite;
+
+}
+
+.roadmap-arrow::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+
+left:-20px;
+
+width:12px;
+
+height:12px;
+
+background:#8b5cf6;
+
+border-radius:50%;
+
+transform:translateY(-50%);
+
+box-shadow:
+0 0 10px #8b5cf6,
+0 0 20px #8b5cf6,
+0 0 40px #8b5cf6;
+
+animation:moveDot 2.5s linear infinite;
+
 }
 
 @keyframes moveArrow{
@@ -722,6 +773,18 @@ background-position:0 0;
 
 to{
 background-position:24px 0;
+}
+
+}
+
+@keyframes moveDot{
+
+0%{
+left:-20px;
+}
+
+100%{
+left:120px;
 }
 
 }
