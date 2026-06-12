@@ -23,3 +23,8 @@ hiddenElements.forEach((el) => {
 observer.observe(el);
 
 });
+function showCertificate(imageName){
+
+document.getElementById("certificate-image").src = imageName;
+
+}
