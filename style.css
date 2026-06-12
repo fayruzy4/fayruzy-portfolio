@@ -6,9 +6,17 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#030b2f;
-color:white;
-overflow-x:hidden;
+    background: linear-gradient(
+        -45deg,
+        #0a0f2c,
+        #162d73,
+        #1b3c9d,
+        #0f1f52
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientFlow 15s ease infinite;
 }
 
 body::before{
@@ -1115,4 +1123,19 @@ font-size:24px;
 
 z-index:9999;
 cursor:pointer;
+}
+@keyframes gradientFlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
 }
