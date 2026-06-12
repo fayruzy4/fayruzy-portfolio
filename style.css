@@ -82,14 +82,14 @@ background:linear-gradient(
 .hero{
 min-height:100vh;
 
-display:flex;
-justify-content:space-between;
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+
 align-items:center;
-gap:80px;
 
-padding:120px 8%;
+padding:120px 6%;
 
-position:relative;
+overflow:hidden;
 }
 
 .hero-left{
@@ -136,10 +136,13 @@ line-height:1.8;
 }
 
 .hero-right img{
-width:420px;
-position:absolute;
-left:0;
-bottom:0;
+width:380px;
+max-width:100%;
+position:relative;
+z-index:2;
+
+filter:
+drop-shadow(0 0 40px #6c63ff);
 }
 
 filter:
@@ -148,9 +151,11 @@ drop-shadow(0 0 40px #6c63ff);
 
 .hero-right{
 position:relative;
-width:650px;
-height:700px;
-flex-shrink:0;
+width:520px;
+height:600px;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .glow-circle{
@@ -207,16 +212,16 @@ font-size:14px;
 }
 
 .card-1{
-right:0;
-top:60px;
+right:10px;
+top:80px;
 }
 
 .card-2{
 right:0;
-top:210px;
+top:240px;
 }
 
 .card-3{
-right:0;
-top:360px;
+right:10px;
+top:400px;
 }
