@@ -1306,6 +1306,17 @@ box-shadow:
 
 }
 
-.active-step{
-animation:pulseCard 2s infinite;
+.step1{
+animation:pulseCard 6s infinite;
+animation-delay:0s;
 }
+
+.step2{
+animation:pulseCard 6s infinite;
+animation-delay:2s;
+}
+
+.step3{
+animation:pulseCard 6s infinite;
+animation-delay:4s;
+    }
