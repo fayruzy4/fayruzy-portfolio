@@ -1096,3 +1096,23 @@ button:active,
 transform:scale(.96);
 
 }
+.music-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+
+width:60px;
+height:60px;
+
+border:none;
+border-radius:50%;
+
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+
+color:white;
+font-size:24px;
+
+z-index:9999;
+cursor:pointer;
+}
