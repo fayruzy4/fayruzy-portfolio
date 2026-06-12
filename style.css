@@ -85,8 +85,11 @@ min-height:100vh;
 display:flex;
 justify-content:space-between;
 align-items:center;
+gap:80px;
 
 padding:120px 8%;
+
+position:relative;
 }
 
 .hero-left{
@@ -133,9 +136,21 @@ line-height:1.8;
 }
 
 .hero-right img{
-width:500px;
+width:420px;
+position:absolute;
+left:0;
+bottom:0;
+}
+
 filter:
 drop-shadow(0 0 40px #6c63ff);
+}
+
+.hero-right{
+position:relative;
+width:650px;
+height:700px;
+flex-shrink:0;
 }
 
 .glow-circle{
@@ -192,16 +207,16 @@ font-size:14px;
 }
 
 .card-1{
-right:-140px;
-top:70px;
+right:0;
+top:60px;
 }
 
 .card-2{
-right:-160px;
-top:230px;
+right:0;
+top:210px;
 }
 
 .card-3{
-right:-140px;
-top:390px;
+right:0;
+top:360px;
 }
