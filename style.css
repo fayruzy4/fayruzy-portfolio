@@ -156,6 +156,28 @@ height:600px;
 display:flex;
 justify-content:center;
 align-items:center;
+  overflow:hidden;
+}
+.hero-right::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:180px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        #050b2f
+    );
+
+    z-index:3;
+
+    pointer-events:none;
 }
 
 .glow-circle{
