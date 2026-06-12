@@ -1026,26 +1026,7 @@ margin-bottom:10px;
 color:#bbb;
 }
 
-.email-card{
 
-grid-column:1/4;
-
-padding:40px;
-
-background:
-linear-gradient(
-135deg,
-rgba(255,215,0,.15),
-rgba(75,107,255,.15)
-);
-
-border:1px solid rgba(255,215,0,.3);
-
-}
-
-.email-card h3{
-font-size:28px;
-}
 
 .email-card p{
 font-size:20px;
