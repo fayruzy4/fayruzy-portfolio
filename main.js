@@ -361,4 +361,42 @@ visitorTime.textContent =
 updateVisitorTime();
 
 setInterval(updateVisitorTime,1000);
+const overlay =
+document.getElementById("welcome-overlay");
+
+const enterBtn =
+document.getElementById("enter-site");
+
+const lastVisit =
+localStorage.getItem("welcomeSeen");
+
+if(lastVisit){
+
+const diff =
+Date.now() - Number(lastVisit);
+
+if(diff < 86400000){
+
+overlay.style.display = "none";
+
+}
+
+}
+
+enterBtn.addEventListener("click", () => {
+
+overlay.classList.add("fade-out");
+
+localStorage.setItem(
+"welcomeSeen",
+Date.now()
+);
+
+setTimeout(() => {
+
+overlay.style.display = "none";
+
+}, 500);
+
+});
 
