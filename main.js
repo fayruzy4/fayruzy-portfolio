@@ -399,4 +399,5 @@ overlay.style.display = "none";
 }, 500);
 
 });
+console.log("WELCOME CARD AKTIF");
 
