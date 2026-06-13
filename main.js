@@ -276,7 +276,7 @@ music.src = song;
 music.play();
 
 musicBtn.innerHTML = "🔊";
-
+playing = true;
 
 
 musicMenu.classList.remove("show");
