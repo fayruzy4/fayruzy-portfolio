@@ -97,3 +97,21 @@ timeZone:"Asia/Jakarta"
 updateClocks();
 setInterval(updateClocks,1000);
 
+const certCount = document.getElementById("cert-count");
+
+let cert = 0;
+
+const certInterval = setInterval(() => {
+
+cert++;
+
+certCount.textContent = cert + "+";
+
+if(cert >= 13){
+
+clearInterval(certInterval);
+
+}
+
+}, 100);
+
