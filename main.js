@@ -98,6 +98,7 @@ updateClocks();
 setInterval(updateClocks,1000);
 
 const certCount = document.getElementById("cert-count");
+const projectCount = document.getElementById("project-count");
 
 let certAnimated = false;
 
