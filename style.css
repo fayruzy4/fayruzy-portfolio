@@ -1622,7 +1622,7 @@ transform:scale(1);
 }
 
 50%{
-transform:scale(1.15);
+transform:scale(1.2) rotate(10deg);
 box-shadow:0 0 25px rgba(255,255,255,.4);
 }
 
