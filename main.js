@@ -112,6 +112,61 @@ if (entry.isIntersecting && !certAnimated) {
 
 certAnimated = true;
 
+  let project = 0;
+
+const projectInterval = setInterval(() => {
+
+project++;
+
+projectCount.textContent = project + "+";
+
+if(project >= 5){
+
+clearInterval(projectInterval);
+
+projectCount.classList.add("stat-finish");
+
+}
+
+}, 400);
+
+  let org = 0;
+
+const orgInterval = setInterval(() => {
+
+org++;
+
+orgCount.textContent = org + "+";
+
+if(org >= 2){
+
+clearInterval(orgInterval);
+
+orgCount.classList.add("stat-finish");
+
+}
+
+}, 1000);
+
+  let lang = 0;
+
+const langInterval = setInterval(() => {
+
+lang++;
+
+langCount.textContent = lang;
+
+if(lang >= 3){
+
+clearInterval(langInterval);
+
+langCount.classList.add("stat-finish");
+
+}
+
+}, 600);
+
+  
 let cert = 0;
 
 const certInterval = setInterval(() => {
@@ -137,55 +192,3 @@ clearInterval(certInterval);
 
 certObserver.observe(certCount);
 
-let project = 0;
-
-const projectInterval = setInterval(() => {
-
-project++;
-
-projectCount.textContent = project + "+";
-
-if(project >= 5){
-
-clearInterval(projectInterval);
-  projectCount.classList.add("stat-finish");
-
-}
-
-}, 400);
-
-let org = 0;
-
-const orgInterval = setInterval(() => {
-
-org++;
-
-orgCount.textContent = org + "+";
-
-if(org >= 2){
-
-clearInterval(orgInterval);
-
-orgCount.classList.add("stat-finish");
-
-}
-
-}, 1000);
-
-let lang = 0;
-
-const langInterval = setInterval(() => {
-
-lang++;
-
-langCount.textContent = lang;
-
-if(lang >= 3){
-
-clearInterval(langInterval);
-
-langCount.classList.add("stat-finish");
-
-}
-
-}, 600);
