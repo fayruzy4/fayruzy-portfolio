@@ -58,9 +58,18 @@ musicBtn.addEventListener("click", () => {
 
     musicMenu.classList.toggle("show");
 
-    if (!playing) {
+    if (playing) {
+
+        music.pause();
+        playing = false;
+        musicBtn.innerHTML = "🎵";
+
+    } else {
+
         music.play();
         playing = true;
+        musicBtn.innerHTML = "🔊";
+
     }
 
 });
@@ -257,10 +266,6 @@ document.getElementById("birthday-countdown").textContent =
 updateBirthdayCountdown();
 
 setInterval(updateBirthdayCountdown,1000);
-
-musicBtn.addEventListener("click", () => {
-musicMenu.classList.toggle("show");
-});
 
 document.addEventListener("click", (e) => {
 
