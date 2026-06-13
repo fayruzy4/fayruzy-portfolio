@@ -1718,3 +1718,94 @@ margin-bottom:15px;
 opacity:0.8;
 font-weight:600;
 }
+#welcome-overlay{
+position:fixed;
+inset:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(5,10,30,.55);
+backdrop-filter:blur(12px);
+
+z-index:99999;
+
+transition:opacity .5s ease;
+}
+
+#welcome-overlay.hide{
+opacity:0;
+pointer-events:none;
+}
+
+.welcome-card{
+
+width:90%;
+max-width:420px;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 0 30px rgba(75,107,255,.25);
+
+animation:floatCard 4s ease-in-out infinite;
+}
+
+.welcome-card h2{
+margin-bottom:15px;
+}
+
+.welcome-card p{
+margin:10px 0;
+line-height:1.8;
+}
+
+#visitor-time{
+color:#ffd95c;
+font-weight:600;
+}
+
+#enter-site{
+
+margin-top:15px;
+
+padding:12px 28px;
+
+border:none;
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:600;
+
+color:white;
+
+background:linear-gradient(
+90deg,
+#4b6bff,
+#8b5cf6
+);
+}
+
+@keyframes floatCard{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
