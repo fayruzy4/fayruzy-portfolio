@@ -51,23 +51,11 @@ preview.style.display = "block";
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-let playing = false;
+const musicMenu = document.getElementById("musicMenu");
 
 musicBtn.addEventListener("click", () => {
 
-if(!playing){
-
-music.play();
-musicBtn.innerHTML = "🔊";
-playing = true;
-
-}else{
-
-music.pause();
-musicBtn.innerHTML = "🎵";
-playing = false;
-
-}
+musicMenu.classList.toggle("show");
 
 });
 function updateClocks(){
