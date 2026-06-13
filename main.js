@@ -49,6 +49,14 @@ preview.style.display = "block";
 
 }
 const music = document.getElementById("bgMusic");
+const playlist = [
+"Hindia - Cincin Official Lyric Video.mp3",
+"EverythingUAre.mp3",
+"IRise.mp3",
+"Nasheed.Shukraan.mp3"
+];
+
+let currentSong = 0;
 const musicBtn = document.getElementById("musicBtn");
 let playing = false;
 
@@ -280,7 +288,8 @@ music.pause();
 }
 
 function changeMusic(song){
-
+currentSong = playlist.indexOf(song);
+    
 music.src = song;
 
 music.play();
@@ -292,6 +301,19 @@ playing = true;
 musicMenu.classList.remove("show");
 
 }
+music.addEventListener("ended", () => {
+
+currentSong++;
+
+if(currentSong >= playlist.length){
+currentSong = 0;
+}
+
+music.src = playlist[currentSong];
+
+music.play();
+
+});
 
 async function updateDailyQuote() {
 
