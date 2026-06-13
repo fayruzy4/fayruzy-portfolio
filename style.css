@@ -1818,3 +1818,25 @@ transition:opacity 0.5s ease;
 opacity:0;
 pointer-events:none;
 }
+@media (max-width:768px){
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.cv-main-btn{
+order:2;
+}
+
+.hero-buttons .secondary-btn:first-of-type{
+order:1;
+}
+
+.hero-buttons .secondary-btn:last-of-type{
+order:3;
+}
+
+}
