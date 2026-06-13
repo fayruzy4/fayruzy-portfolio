@@ -100,6 +100,7 @@ setInterval(updateClocks,1000);
 const certCount = document.getElementById("cert-count");
 const projectCount = document.getElementById("project-count");
 const orgCount = document.getElementById("org-count");
+const langCount = document.getElementById("lang-count");
 
 let certAnimated = false;
 
@@ -170,3 +171,21 @@ orgCount.classList.add("stat-finish");
 }
 
 }, 1000);
+
+let lang = 0;
+
+const langInterval = setInterval(() => {
+
+lang++;
+
+langCount.textContent = lang;
+
+if(lang >= 3){
+
+clearInterval(langInterval);
+
+langCount.classList.add("stat-finish");
+
+}
+
+}, 600);
