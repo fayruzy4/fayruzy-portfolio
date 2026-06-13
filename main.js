@@ -101,11 +101,11 @@ const certCount = document.getElementById("cert-count");
 
 let certAnimated = false;
 
-const observer = new IntersectionObserver((entries) => {
+const certObserver = new IntersectionObserver((entries) => {
 
-entries.forEach(entry => {
+entries.forEach((entry) => {
 
-if(entry.isIntersecting && !certAnimated){
+if (entry.isIntersecting && !certAnimated) {
 
 certAnimated = true;
 
@@ -117,7 +117,7 @@ cert++;
 
 certCount.textContent = cert + "+";
 
-if(cert >= 13){
+if (cert >= 13) {
 
 clearInterval(certInterval);
 
@@ -131,4 +131,4 @@ clearInterval(certInterval);
 
 });
 
-observer.observe(certCount);
+certObserver.observe(certCount);
