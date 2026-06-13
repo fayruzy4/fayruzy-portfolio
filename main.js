@@ -214,3 +214,52 @@ calendar:"islamic"
 }
 
 updateDates();
+
+function updateBirthdayCountdown(){
+
+const now = new Date();
+
+let nextBirthday = new Date(
+now.getFullYear(),
+0,
+4
+);
+
+if(now > nextBirthday){
+nextBirthday = new Date(
+now.getFullYear() + 1,
+0,
+4
+);
+}
+
+const diff = nextBirthday - now;
+
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor(
+(diff % (1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
+
+const minutes = Math.floor(
+(diff % (1000 * 60 * 60))
+/
+(1000 * 60)
+);
+
+const seconds = Math.floor(
+(diff % (1000 * 60))
+/
+1000
+);
+
+document.getElementById("birthday-countdown").textContent =
+`${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+
+}
+
+updateBirthdayCountdown();
+
+setInterval(updateBirthdayCountdown,1000);
