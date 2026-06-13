@@ -96,6 +96,7 @@ timeZone:"Asia/Jakarta"
 
 updateClocks();
 setInterval(updateClocks,1000);
+window.addEventListener("load", () => {
 
 const certCount = document.getElementById("cert-count");
 
@@ -115,3 +116,4 @@ clearInterval(certInterval);
 
 }, 100);
 
+});
