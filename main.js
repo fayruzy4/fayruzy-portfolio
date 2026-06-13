@@ -59,6 +59,7 @@ musicBtn.addEventListener("click", () => {
     musicMenu.classList.toggle("show");
 
 });
+function updateClocks(){
 
 document.getElementById("saudi-time").textContent =
 new Date().toLocaleTimeString("id-ID",{
