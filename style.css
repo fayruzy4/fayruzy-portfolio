@@ -1449,3 +1449,17 @@ transform:translateY(0);
 }
 
 }
+@keyframes statusGlow{
+
+0%,100%{
+box-shadow:
+0 0 10px rgba(0,255,150,.2);
+}
+
+50%{
+box-shadow:
+0 0 20px rgba(0,255,150,.5),
+0 0 40px rgba(0,255,150,.3);
+}
+
+}
