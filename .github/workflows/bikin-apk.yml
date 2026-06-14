@@ -1,0 +1,27 @@
+name: Ubah Web Jadi APK Otomatis
+
+on:
+  push:
+    branches:
+      - main  # Ubah menjadi master jika branch utama Anda namanya master
+
+jobs:
+  convert-to-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil Kode Website
+        uses: actions/checkout@v4
+
+      - name: Robot Merakit Web Menjadi APK
+        uses: darkshredder/web-to-app-action@main
+        with:
+          build-folder-path: "."
+          app-name: "FayruzyPortfolio"
+          output-folder-path: "output-apk"
+
+      - name: Simpan File APK Siap Download
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aplikasi-APK-Saya
+          path: output-apk/
+          
